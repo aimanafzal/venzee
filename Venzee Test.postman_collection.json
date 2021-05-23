@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "7b7fdcc8-a732-432c-b7de-6f2ff0d23a56",
+		"name": "Venzee Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/add-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Kamran Jamshaid\",\n    \"amount\": 10000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/add-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"add-user"
+					]
+				},
+				"description": "This will add user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/debit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"accountNumber\": \"c2988380-b835-4fce-8f49-46adb2c19e5f\",\n    \"amount\": 8000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/debit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"debit"
+					]
+				},
+				"description": "This will debit (deduct amount) from users account"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/credit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"accountNumber\": \"c2988380-b835-4fce-8f49-46adb2c19e5f\",\n    \"amount\": 200000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/credit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credit"
+					]
+				},
+				"description": "This will credit (add amount) in users account"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/my-transactions/c2988380-b835-4fce-8f49-46adb2c19e5f",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/my-transactions/c2988380-b835-4fce-8f49-46adb2c19e5f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"my-transactions",
+						"c2988380-b835-4fce-8f49-46adb2c19e5f"
+					]
+				},
+				"description": "This will show transaction history according the id provided in query"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/account-details/c2988380-b835-4fce-8f49-46adb2c19e5f",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/account-details/c2988380-b835-4fce-8f49-46adb2c19e5f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"account-details",
+						"c2988380-b835-4fce-8f49-46adb2c19e5f"
+					]
+				},
+				"description": "This will show user his/her account details according to id provided in query"
+			},
+			"response": []
+		}
+	]
+}
